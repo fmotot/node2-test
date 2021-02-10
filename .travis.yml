@@ -8,7 +8,7 @@ script:
 
 deploy:
     provider: script
-    script: bash .travis/docker_push
+    script: bash docker_push
     on:
         branch: main
     

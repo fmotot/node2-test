@@ -1,2 +1,4 @@
+echo "Login to docker hub"
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --pasword-stdin
-docker push $DOCKER_USERNAME/node2test
+echo "push image"
+docker push fmotot/node2test

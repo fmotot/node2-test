@@ -1,0 +1,2 @@
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --pasword-stdin
+docker push $DOCKER_USERNAME/node2test

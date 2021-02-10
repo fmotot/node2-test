@@ -6,5 +6,9 @@ script:
     - docker build -t fred/node2 .
     - docker images fred/node2
 
-
+deploy:
+    provider: script
+    script: bash .travis/docker_push
+    on:
+        branch: main
     

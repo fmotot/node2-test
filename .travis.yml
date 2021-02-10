@@ -5,3 +5,13 @@ services:
 script:
     - docker build -t fred/node2 .
     - docker images fred/node2
+
+before_deploy:
+    - docker login -u fmotot -p testDocTravis
+
+deploy:
+    provider: script
+    script: docker push fmotot/node2test
+    on:
+        branch: master
+    

@@ -7,11 +7,11 @@ script:
     - docker images fred/node2
 
 before_deploy:
-    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 deploy:
     provider: script
-    script: docker push fmotot/node2test
+    script: docker push $DOCKER_USERNAME/node2test
     on:
         branch: main
     

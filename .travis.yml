@@ -11,7 +11,7 @@ before_deploy:
 
 deploy:
     provider: script
-    script: docker push $DOCKER_USERNAME/node2test
+    script: docker push $DOCKER_USERNAME/getting-start:node2
     on:
         branch: main
     

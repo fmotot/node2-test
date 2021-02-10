@@ -13,5 +13,5 @@ deploy:
     provider: script
     script: docker push fmotot/node2test
     on:
-        branch: master
+        branch: main
     
